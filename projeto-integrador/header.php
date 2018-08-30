@@ -28,23 +28,14 @@ if (isset($lembrarUsuario)) {
     <div class="container">
       <div class="d-flex justify-content-end">
 
-        <?php if (isset($nomeSession)) {
-          echo "<span class='badge badge-success mr-1'>Bem vindo $nomeSession</span> " ;
-        }
-
-        if (isset($_COOKIE["nome_usuario"])){
-            $_COOKIE["nome_usuario"];
-        };
-
-        if (!isset($nomeSession)){
-          echo '<a class="dropdown-toggle badge text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <a class="dropdown-toggle badge text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Entrar
           </a>
           <div class="dropdown-menu">
             <form class="px-4 py-3" method="post" action="header.php">
               <div class="form-group">
                 <label for="exampleDropdownFormEmail1">Usuário</label>
-                <input type="text" name="usuario" class="form-control" value="'.$_COOKIE["nome_usuario"].'" placeholder="Nome de usuário">
+                <input type="text" name="usuario" class="form-control" value="" placeholder="Nome de usuário">
               </div>
               <div class="form-group">
                 <label for="exampleDropdownFormPassword1">Senha</label>
@@ -61,13 +52,9 @@ if (isset($lembrarUsuario)) {
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Esqueceu sua senha ?</a>
           </div>
-          <a href="cadastro.php" class="badge text-white">Cadastro</a>';
-        }
+          <a href="cadastro.php" class="badge text-white">Cadastro</a>
 
-        if (isset($nomeSession)){
-          echo '<a href="index.php?sair=1" class="badge text-white">Sair</a>';
-        }
-        ?>
+        <a href="index.php?sair=1" class="badge text-white">Sair</a>
       </div>
     </div>
   </div>

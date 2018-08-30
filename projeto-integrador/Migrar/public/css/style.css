@@ -1,0 +1,59 @@
+body{
+  font-family: 'Lato', sans-serif;
+}
+
+.search-bar {
+  width: 400px !important;
+}
+
+header{
+  background-image: url('../img/estadio-copy.jpg');
+  background-size: cover;
+}
+
+.pad{
+  padding-top:10px;
+  padding-bottom:10px;
+}
+
+hr{
+  background-color: #bdbdbd;
+}
+
+.mr-1{
+  margin-right: 10px !important;
+}
+
+.mb-0{
+  margin-bottom: 90px !important;
+}
+
+.mb-1{
+  margin-bottom: 40px !important;
+}
+
+.mt-0{
+  margin-top: 90px !important;
+}
+
+.mt-3{
+  margin-top: 40px !important;
+}
+
+.mt-1{
+  margin-top: 30px !important;
+}
+
+.form{
+  max-width: 600px !important;
+}
+
+footer{
+  background-color: rgb(52, 58, 64);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.cor{
+  color: rgb(0, 255, 148);
+}
