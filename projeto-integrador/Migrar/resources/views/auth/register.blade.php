@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<?php $page = 'nada'; ?>
 <section id="singup">
   <div class="container">
     <div class="py-5 text-center">
@@ -60,12 +61,17 @@
           </div>
 
           <div class="form-group mb-3">
-            <label for="egenero">Genero</label>
-            <select class="form-control" name="genero" id="exampleFormControlSelect1">
-              <option value="">Escolha</option>
+            <label for="genero">Genero</label>
+            <select class="form-control {{ $errors->has('genero') ? ' is-invalid' : '' }}" name="genero" value="{{ old('genero') }}" id="exampleFormControlSelect1">
+              <option value="">Selecione</option>
               <option value="Masculino">Masculino</option>
               <option value="Feminino">Feminino</option>
             </select>
+            @if ($errors->has('genero'))
+            <span class="invalid-feedback" role="alert">
+              <strong>{{ $errors->first('genero') }}</strong>
+            </span>
+            @endif
           </div>
 
           <div class="mb-3">

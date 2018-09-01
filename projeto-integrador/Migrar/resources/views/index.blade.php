@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<?php $page = '/'; ?>
 <section>
   <div class="container">
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
@@ -34,12 +35,14 @@
     <hr class="my-4">
     <div class="row d-flex justify-content-around">
       @foreach($produtos as $produto)
-      <div class="card" style="width: 17rem;">
-        <a href="/pagina/produto/{{ $produto->id }}"><img class="card-img-top" src="{{ $produto->foto }}" alt="Card image cap"></a>
+      <div class="card mt-1 shadow" style="width: 17rem;">
+        <a href="/pagina/produto/{{ $produto->id }}"><img class="card-img-top border"src="{{ $produto->foto }}" alt="Card image cap"></a>
         <div class="card-body">
           <h5 class="card-title">R$ {{ $produto->valor }}</h5>
-          <p class="card-text">{{ $produto->description }}</p>
-          <a href="#" class="btn btn-primary">Adicionar ao carrinho</a>
+          <div style="height:100px; overflow: scroll;">
+            <p class="card-text">{{ $produto->description }}</p>
+          </div>
+          <a href="#" class="btn btn-primary mt-1">Adicionar ao carrinho</a>
         </div>
       </div>
       @endforeach

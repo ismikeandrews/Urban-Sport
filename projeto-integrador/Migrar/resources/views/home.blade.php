@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<?php $page = '/home'; ?>
 <div class="container">
   <div class="row d-flex justify-content-around">
 

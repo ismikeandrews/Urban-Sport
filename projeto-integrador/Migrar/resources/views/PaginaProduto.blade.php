@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+<?php $page = '/pagina/produto/{ $produto->id }'; ?>
 <section>
   <div class="container">
     <hr>
@@ -13,10 +13,10 @@
               <div><a href="#"><img src="{{$produto->foto}}"></a></div>
             </div>
             <div class="img-small-wrap">
-              <div class="item-gallery"> <img src="{{ $produto->foto }}"> </div>
-              <div class="item-gallery"> <img src="{{ $produto->foto }}"> </div>
-              <div class="item-gallery"> <img src="{{ $produto->foto }}"> </div>
-              <div class="item-gallery"> <img src="{{ $produto->foto }}"> </div>
+              <div class="item-gallery"> <img class="border" src="{{ $produto->foto }}"> </div>
+              <div class="item-gallery"> <img class="border" src="{{ $produto->foto }}"> </div>
+              <div class="item-gallery"> <img class="border" src="{{ $produto->foto }}"> </div>
+              <div class="item-gallery"> <img class="border" src="{{ $produto->foto }}"> </div>
             </div>
           </article>
         </aside>
@@ -96,62 +96,60 @@
       @include('comentario')
       <div class="row mt-1 mb-1">
         <div class="col-xs-12 col-md-8">
-          <div class="well well-sm">
-            <div class="row">
-              <div class="col-xs-12 col-md-6 text-center">
-                <h1 class="rating-num">4.0</h1>
-                <div class="rating">
-                  <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star">
-                  </span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star">
-                  </span><span class="glyphicon glyphicon-star-empty"></span>
-                </div>
-                <div>
-                  <span class="glyphicon glyphicon-user"></span>1,050,008 total
-                </div>
+          <div class="row">
+            <div class="col-xs-12 col-md-6 text-center">
+              <h2 class="rating-num">4.0</h2>
+              <div class="rating">
+                <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star">
+                </span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star">
+                </span><span class="glyphicon glyphicon-star-empty"></span>
               </div>
-              <div class="col-xs-12 col-md-6">
-                <div class="row rating-desc">
-                  <div class="col-xs-3 col-md-5 text-right">
-                    <span class="glyphicon glyphicon-star">★★★★★</span>
+              <div>
+                <span class="glyphicon glyphicon-user"></span>1,050,008 total
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+              <div class="row rating-desc">
+                <div class="col-xs-3 col-md-5 text-right">
+                  <span class="glyphicon glyphicon-star">★★★★★</span>
+                </div>
+                <div class="col-xs-8 col-md-7">
+                  <div class="progress progress-striped">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20"aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
                   </div>
-                  <div class="col-xs-8 col-md-7">
-                    <div class="progress progress-striped">
-                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20"aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
-                    </div>
+                </div>
+                <div class="col-xs-3 col-md-5 text-right">
+                  <span class="glyphicon glyphicon-star">★★★★</span>
+                </div>
+                <div class="col-xs-8 col-md-7">
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20"
+                    aria-valuemin="0" aria-valuemax="100" style="width: 60%">
                   </div>
-                  <div class="col-xs-3 col-md-5 text-right">
-                    <span class="glyphicon glyphicon-star">★★★★</span>
+                </div>
+                </div>
+                <div class="col-xs-3 col-md-5 text-right">
+                  <span class="glyphicon glyphicon-star">★★★</span>
+                </div>
+                <div class="col-xs-8 col-md-7">
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 40%"></div>
                   </div>
-                  <div class="col-xs-8 col-md-7">
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20"
-                      aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                    </div>
+                </div>
+                <div class="col-xs-3 col-md-5 text-right">
+                  <span class="glyphicon glyphicon-star">★★</span>
+                </div>
+                <div class="col-xs-8 col-md-7">
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"></div>
                   </div>
-                  </div>
-                  <div class="col-xs-3 col-md-5 text-right">
-                    <span class="glyphicon glyphicon-star">★★★</span>
-                  </div>
-                  <div class="col-xs-8 col-md-7">
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 40%"></div>
-                    </div>
-                  </div>
-                  <div class="col-xs-3 col-md-5 text-right">
-                    <span class="glyphicon glyphicon-star">★★</span>
-                  </div>
-                  <div class="col-xs-8 col-md-7">
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"></div>
-                    </div>
-                  </div>
-                  <div class="col-xs-3 col-md-5 text-right">
-                    <span class="glyphicon glyphicon-star">★</span>
-                  </div>
-                  <div class="col-xs-8 col-md-7">
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 15%"></div>
-                    </div>
+                </div>
+                <div class="col-xs-3 col-md-5 text-right">
+                  <span class="glyphicon glyphicon-star">★</span>
+                </div>
+                <div class="col-xs-8 col-md-7">
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 15%"></div>
                   </div>
                 </div>
               </div>
