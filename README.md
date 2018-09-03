@@ -17,7 +17,7 @@ Task: **Home, FAQ, Login e cadastro**
 
 Linguagem usada: **HTML+CSS**
 
-- **P.O:**Michael
+- **P.O:** Michael
 - **Scrum Master:** Liu
 - **Dev:** Marcelo
 
