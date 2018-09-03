@@ -8,7 +8,6 @@ Somos o grupo The Code Strikers do curso de Full Stack da Digital House no ano d
 - **Liu**
 - **Marcelo**
 - **Michael**
-- **Renato**
 
 ---
 
@@ -18,9 +17,8 @@ Task: **Home, FAQ, Login e cadastro**
 
 Linguagem usada: **HTML+CSS**
 
-- **P.O:** Renato
-- **Scrum Master:** Michael
-- **Dev:** Liu
+- **P.O:**Michael
+- **Scrum Master:** Liu
 - **Dev:** Marcelo
 
 > **Observações :** 
@@ -34,8 +32,7 @@ Task: 1 - **Login e o cadastro funcionem** 2 - **Incluir a página de produtos c
 Linguagem usada: **PHP & HTML+CSS**
 
 - **P.O:** Marcelo
-- **Scrum Master:** Renato
-- **Dev:** Michael
+- **Scrum Master:** Michael
 - **Dev:** Liu 
 
 > **Observações :** 
@@ -49,7 +46,6 @@ Linguagem usada: **SQL**
 
 - **P.O:** Liu 
 - **Scrum Master:**  Marcelo
-- **Dev:** Renato
 - **Dev:** Michael
 
 > **Observações :** 
@@ -64,7 +60,6 @@ Linguagem usada: **OOP**
 - **P.O:** Michael
 - **Scrum Master:** Liu 
 - **Dev:** Marcelo
-- **Dev:** Renato
 
 > **Observações :** 
 ---
@@ -75,10 +70,9 @@ Task: **Migrar para Laravel,** ou seja: Migrar **login, cadastro e páginas do r
 
 Linguagem usada: **Laravel**
 
-- **P.O:** Renato
+- **P.O:** Marcelo
 - **Scrum Master:** Michael
 - **Dev:** Liu 
-- **Dev:** Marcelo
 
 > **Observações :** 
 ---
@@ -89,10 +83,9 @@ Task: 1 - **Aplicar AJAX no formulário de login e cadastro** ou seja: Migrar **
 
 Linguagem usada: **JavaScript**
 
-- **P.O:** Marcelo
-- **Scrum Master:** Renato
+- **P.O:** Liu
+- **Scrum Master:** Marcelo
 - **Dev:** Michael
-- **Dev:** Liu 
 
 > **Observações :** 
 ---
