@@ -17,7 +17,7 @@ class CreateProduto extends Migration
       Schema::create('produto', function (Blueprint $table){
         $table->increments('id');
         $table->string('name');
-        $table->string('foto');
+        $table->string('foto');//colocar o caminho da foto na sua pasta laravel /public/img/imagem.jpg chamar a imagem com o caminho /img/imagem.jpg
         $table->float('valor', 8, 2);
         $table->mediumText('description');
         $table->unsignedInteger('id_marca');
