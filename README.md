@@ -88,8 +88,6 @@ Linguagem usada: **JavaScript**
 - **Dev:** Michael
 
 > **Observações :** 
-
----
 # Funções da pagina Admin(dashboard)
 **Cadastro para admin não disponivel na view**
 
