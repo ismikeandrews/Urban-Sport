@@ -73,7 +73,7 @@ class AdmProdutoController extends Controller
   }
   public function produtoDelete($id){
     $apagar = Produto::find($id);
-
+    //alter table 'table' auto_increment = 'id'
     $apagar->delete();
 
     return redirect('/admin/produtos');
@@ -124,7 +124,7 @@ class AdmProdutoController extends Controller
     $sucesso = $produto->save();
 
     return view('dashboard.updateProduto')
-    ->with('filme', $produto)
+    ->with('produto', $produto)
     ->with('tudocerto', $sucesso)
     ->with('categorias', $categorias)
     ->with('marcas', $marcas)
@@ -229,11 +229,11 @@ class AdmProdutoController extends Controller
       'name' => 'required',
       'id_categoria' => 'required|numeric'
     ]);
+
     $tamanho = Tamanho::create([
       'name' => $request->input('name'),
       'id_categoria' => $request->input('id_categoria'),
     ]);
-
     $sucesso = $tamanho->save();
     $tamanhos = Tamanho::paginate(10);
     $categorias = Categoria::all();

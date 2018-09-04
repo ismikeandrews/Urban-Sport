@@ -16,6 +16,7 @@ Route::get('/pagina/produto/{id}', 'PaginasController@produto');
 Route::get('/pagina/marca', 'PaginasController@marca');
 Route::get('/pagina/categoria', 'PaginasController@categoria');
 Route::get('/pagina/esporte', 'PaginasController@esporte');
+Route::get('/pagina/procurar', 'PaginasController@search');
 //orderBy
 Route::get('/pagina/marca/ordenar/{id}', 'PaginasController@orderMarca');
 Route::get('/pagina/categoria/ordenar/{id}', 'PaginasController@orderCategoria');
@@ -58,4 +59,5 @@ Route::prefix('admin')->group(function() {
   //Clientes
   Route::get('/clientes', 'AdminController@paginaClientes')->name('admin.clientes');
   Route::get('/clientes/newsletter', 'AdminController@paginaNews')->name('admin.clientes');
+  Route::get('/cliente/adicionar', 'AdminController@paginaCadastoUrs')->name('admin.clientes');
 });

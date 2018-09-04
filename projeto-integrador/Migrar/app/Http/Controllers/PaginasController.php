@@ -7,6 +7,7 @@ use App\Produto;
 use App\Esporte;
 use App\Categoria;
 use App\Marca;
+use App\Tamanho;
 use App\Newsletter;
 
 class PaginasController extends Controller
@@ -21,6 +22,16 @@ class PaginasController extends Controller
       $produto = Produto::find($id);
 
       return view('PaginaProduto')->with('produto', $produto);
+    }
+
+    //search bar
+    public function search(Request $request){
+      $procura = $request->input('search');
+
+    	$produto = Produto::where('name', 'like', '%'.$procura.'%')->get();
+
+    	return view('PaginaPesquisa')
+      ->with('produtos', $produto);
     }
 
     //Funções da pagina de marcas

@@ -81,14 +81,16 @@
         <img src="{{ asset('img/logo.png') }}" width="100" alt="logo">
       </a>
       <div class="mr-auto ml-auto">
-        <form class="form-inline my-2 my-lg-0">
+
+        <form class="form-inline my-2 my-lg-0" action="/pagina/procurar" method="GET">
           <div class="input-group search-bar">
-            <input class="form-control border-right-0 border-secondary" type="search" placeholder="Não funciona ainda !!!" aria-label="Search">
+            <input class="form-control border-right-0 border-secondary" name="search" type="search" placeholder="Search" aria-label="Search">
             <div class="input-group-append">
               <button class="btn btn-light border-secondary my-2 my-sm-0" type="submit"><i class="fa fa-search" style="font-size:18px"></i></button>
             </div>
           </div>
         </form>
+
       </div>
       <div class="btn-group">
         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

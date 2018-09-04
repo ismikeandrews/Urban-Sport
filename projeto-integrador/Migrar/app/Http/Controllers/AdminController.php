@@ -40,4 +40,9 @@ class AdminController extends Controller
 
       return view('dashboard.admNewsletter')->with('news', $news);
     }
+
+    public function paginaCadastoUrs(){
+
+      return view('dashboard.addCliente');
+    }
 }

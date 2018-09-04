@@ -17,7 +17,7 @@ Task: **Home, FAQ, Login e cadastro**
 
 Linguagem usada: **HTML+CSS**
 
-- **P.O:**Michael
+- **P.O:** Michael
 - **Scrum Master:** Liu
 - **Dev:** Marcelo
 
@@ -88,4 +88,23 @@ Linguagem usada: **JavaScript**
 - **Dev:** Michael
 
 > **Observações :** 
+
+---
+# Funções da pagina Admin(dashboard)
+**Cadastro para admin não disponivel na view**
+
+Admin é gerado de formato padrão com nome: **Admin Master** email: **admin@example.org** senha:secret
+
+Para cadastrar o Admin no banco de dados use o comando **php artisan db:seed** após ter rodado o comando **migrate**
+
+Para cadastrar um novo usuario siga os seguintes passos em ordem 
+
+- **1:** Rodar o php artisan tinker
+- **2:** Definir uma variavel para 'new App\Admin', Exemplo: '$admin = new App\Admin'
+- **3:** Preencher os campos chamando o a variavel Exemplo: '$admin->first_name = Adm' campos á serem preenchidos 'first_name - last_name - email - password'
+- **4:** Para fazer hash password user o seguinte metodo '$admin->password = Hash::make('senha')'
+- **5:** Salve os campos com a função save() Exemplo: '$admin->save()'
+
+> **Observações :** senha deve conter no minimo 5 caracteres
+
 ---
