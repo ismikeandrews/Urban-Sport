@@ -3,7 +3,7 @@
     <div class="row d-flex justify-content-between">
       <div class="col-md-3">
         <ul style="list-style-type:none">
-          <li><a href="#" class="text-white">SOBRE NÓS</a></li>
+          <li><a href="/pagina/sobre" class="text-white">SOBRE NÓS</a></li>
           <li><a href="#" class="text-white">CONTATO</a></li>
           <li><a href="#" class="text-white">AJUDA</a></li>
           <li><a href="faq.php" class="text-white">FAQ</a></li>
