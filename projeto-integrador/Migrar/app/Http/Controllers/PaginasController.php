@@ -28,7 +28,7 @@ class PaginasController extends Controller
     public function search(Request $request){
       $procura = $request->input('search');
 
-    	$produto = Produto::where('name', 'like', '%'.$procura.'%')->get();
+    	$produto = Produto::where('name', 'like', '%'.$procura.'%')->paginate(12);
 
     	return view('PaginaPesquisa')
       ->with('produtos', $produto);

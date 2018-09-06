@@ -22,12 +22,14 @@
     @endforeach
     @else
     <div class="container">
-      <h4 class="alert alert-danger" role="alert">
+      <h5 class="alert alert-danger" role="alert">
         Nenhum resultato encontrado
-      </h4>
+      </h6>
     </div>
     @endif
-
+    <div class="mt-1 d-flex justify-content-center">
+      {{ $produtos->links() }}
+    </div>
   </div>
 </div>
 @endsection

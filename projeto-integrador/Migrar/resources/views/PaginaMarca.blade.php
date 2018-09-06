@@ -14,9 +14,9 @@
     </div>
 
     <div class="col-md-8 shadow">
-      <div class="row d-flex justify-content-around mb-1">
+      <div class="row d-flex justify-content-start mb-1">
         @foreach($produtos as $produto)
-        <div class="card mt-1 shadow" style="width: 14rem;">
+        <div class="card mt-1 shadow mx-2" style="width: 14.8rem;">
           <a href="/pagina/produto/{{ $produto->id }}"><img class="card-img-top border"src="{{ $produto->foto }}" alt="Card image cap"></a>
           <div class="card-body">
             <h5 class="card-title">R$ {{ $produto->valor }}</h5>

@@ -91,7 +91,7 @@ Linguagem usada: **JavaScript**
 # Funções da pagina Admin(dashboard)
 **Cadastro para admin não disponivel na view**
 
-Admin é gerado de formato padrão com nome: **Admin Master** email: **admin@example.org** senha:secret
+Admin é gerado de formato padrão com nome: **Admin Master** email: **admin@example.org** senha:**secret**
 
 Para cadastrar o Admin no banco de dados use o comando **php artisan db:seed** após ter rodado o comando **migrate**
 

@@ -47,10 +47,19 @@ class AdmProdutoController extends Controller
       'description' => 'required'
     ]);
 
+    $arquivo = $request->file('foto');
+
+    $caminhoDafoto = public_path()."/img/";
+
+    $nomeDoarquivo = $arquivo->getClientOriginalName();
+
+    //mover
+    $arquivo->move($caminhoDafoto, $nomeDoarquivo);
+
     $produto = Produto::create([
       'name' => $request->input('name'),
       'valor' => $request->input('valor'),
-      'foto' => $request->input('foto'),
+      'foto' => "/img/".$nomeDoarquivo,
       'id_marca' => $request->input('id_marca'),
       'id_categoria' => $request->input('id_categoria'),
       'id_tamanho' => $request->input('id_tamanho'),
@@ -71,6 +80,7 @@ class AdmProdutoController extends Controller
       ->with('tamanhos', $tamanhos)
       ->with('esportes', $esportes);
   }
+
   public function produtoDelete($id){
     $apagar = Produto::find($id);
     //alter table 'table' auto_increment = 'id'

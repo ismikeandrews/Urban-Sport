@@ -18,7 +18,7 @@
         @include('dashboard.mainNav')
       </div>
       <hr>
-      <form action="/admin/produtos/adicionar" method="POST">
+      <form action="/admin/produtos/adicionar" method="POST" enctype="multipart/form-data">
         {{ csrf_field() }}
         <div class="form-row">
           <div class="form-group col-md-6">
@@ -40,15 +40,11 @@
             @endif
           </div>
         </div>
-
         <div class="form-group">
-          <label for="foto">Valor</label>
-          <input type="text" class="form-control {{ $errors->has('foto') ? ' is-invalid' : '' }}" id="foto" name="foto" value="{{ old('foto') }}" placeholder="/img/nome.jpg">
-          @if ($errors->has('foto'))
-          <span class="invalid-feedback" role="alert">
-            <strong>{{ $errors->first('foto') }}</strong>
-          </span>
-          @endif
+          <label for="foto">Foto</label>
+          <div class="mt-0">
+            <input type="file" name="foto">
+          </div>
         </div>
         <div class="form-group">
           <label for="id_marca">Marca</label>
