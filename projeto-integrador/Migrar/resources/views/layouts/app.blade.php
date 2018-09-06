@@ -26,7 +26,7 @@
 
     <div id="app">
       @include('navBar')
-      <main class="py-4">
+      <main>
         @yield('content')
       </main>
       @include('footer')

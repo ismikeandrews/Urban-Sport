@@ -109,18 +109,18 @@
 </nav>
 <hr>
 </header>
-<div class="mb-0">
+<div class=" sticky-top bg-white">
   <ul class="nav nav-tabs ">
     <div class="container">
       <div class="row d-flex justify-content-around">
         <li class="nav-item text-center col-4">
-          <a class="nav-link <?php if($page=='/pagina/marca'){ echo 'active';}else { echo '';} ?>" href="/pagina/marca">Marcas</a>
+          <a class="nav-link <?php if($page=='/pagina/marca'){ echo 'active';}else { echo '';} ?> text-dark" href="/pagina/marca">Marcas</a>
         </li>
         <li class="nav-item text-center col-4">
-          <a class="nav-link <?php if($page=='/pagina/categoria'){ echo 'active';}else { echo '';} ?>" href="/pagina/categoria">Categorias</a>
+          <a class="nav-link <?php if($page=='/pagina/categoria'){ echo 'active';}else { echo '';} ?> text-dark" href="/pagina/categoria">Categorias</a>
         </li>
         <li class="nav-item text-center col-4">
-          <a class="nav-link <?php if($page=='/pagina/esporte'){ echo 'active';}else { echo '';} ?>" href="/pagina/esporte">Sports</a>
+          <a class="nav-link <?php if($page=='/pagina/esporte'){ echo 'active';}else { echo '';} ?> text-dark upper-case" href="/pagina/esporte">Sports</a>
         </li>
       </div>
     </div>

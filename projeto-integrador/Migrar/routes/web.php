@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 // paginas
 Route::get('/', 'PaginasController@index');
 Route::get('/pagina/produto/{id}', 'PaginasController@produto');
@@ -17,16 +18,21 @@ Route::get('/pagina/marca', 'PaginasController@marca');
 Route::get('/pagina/categoria', 'PaginasController@categoria');
 Route::get('/pagina/esporte', 'PaginasController@esporte');
 Route::get('/pagina/procurar', 'PaginasController@search');
+
 //orderBy
 Route::get('/pagina/marca/ordenar/{id}', 'PaginasController@orderMarca');
 Route::get('/pagina/categoria/ordenar/{id}', 'PaginasController@orderCategoria');
 Route::get('/pagina/esporte/ordenar/{id}', 'PaginasController@orderEsporte');
+
 //newsletter
 Route::get('/pagina/newsletter', 'PaginasController@newsletter');
-
+//User
+Route::get('/user/update/{id}', 'userController@showform');
 Auth::routes();
 Route::get('/home', 'HomeController@index');
 
+
+// ADMIN FUNCTIONS
 Route::prefix('admin')->group(function() {
   //Login
   Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');

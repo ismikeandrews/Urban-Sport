@@ -49,11 +49,7 @@
       <a href="#"><img src="{{ asset('img/youtube.png') }}" alt="youtube" width="35" class="rounded"></a>
     </div>
 
-    <div class="row d-flex justify-content-center mt-3">
-      <div class="col-md-3 text-center">
-        <img src="{{ asset('img/logo.png') }}" width="100">
-      </div>
-    </div>
+    
     <hr>
     <div class="row d-flex justify-content-center">
       <div class="col-md-4 text-center">
