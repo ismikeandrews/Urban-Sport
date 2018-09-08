@@ -15,7 +15,7 @@
             <h5>{{ Auth::user()->first_name." ".Auth::user()->last_name }}</h5>
           </div>
           <div class="col-12">
-            <a href="#">Atualizar Informações</a>
+            <a href="/user/update/{{Auth::user()->id}}">Atualizar Informações</a>
           </div>
           <div class="col-12">
             <a href="#">Pagamentos</a>

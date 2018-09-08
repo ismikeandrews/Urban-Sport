@@ -3,7 +3,7 @@
 @section('content')
 <?php $page = '/'; ?>
 <section>
-  <div class="container">
+  <div>
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
