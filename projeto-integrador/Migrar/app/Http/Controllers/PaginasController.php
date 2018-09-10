@@ -90,4 +90,10 @@ class PaginasController extends Controller
       return view('index')->with('tudocerto', $sucesso)->with('produtos', $produtos);
 
     }
+
+    //Pagina sobre Nós
+
+    public function sobre () {
+      return view('PaginaSobre');
+    }
 }
