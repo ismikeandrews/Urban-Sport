@@ -39,6 +39,9 @@ Route::prefix('admin')->group(function() {
   Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
   //Adm Index
   Route::get('/', 'AdminController@index')->name('admin.dashboard');
+  //Alterar imagens
+  Route::get('/alterar/banner', 'AdminController@bannerUpdate');
+  Route::get('/alterar/promo', 'AdminController@promoAdd');
   //Produtos
   Route::get('/produtos', 'AdmProdutoController@paginaProdutos')->name('admin.produtos');
   Route::get('/produtos/adicionar', 'AdmProdutoController@produtoForm');
@@ -46,6 +49,12 @@ Route::prefix('admin')->group(function() {
   Route::get('/produto/delete/{id}', 'AdmProdutoController@produtoDelete');
   Route::get('/produto/edit/{id}', 'AdmProdutoController@produtoEditForm');
   Route::put('/produto/edit/{id}', 'AdmProdutoController@produtoEdit');
+  //orderBy produto
+  Route::get('/produto/orderName', 'AdmProdutoController@orderName');
+  Route::get('/produto/orderNameDesc', 'AdmProdutoController@orderNameDesc');
+  Route::get('/produto/orderId', 'AdmProdutoController@orderId');
+  Route::get('/produto/orderIdDesc', 'AdmProdutoController@orderIdDesc');
+
   //Marcas
   Route::get('/marca', 'AdmProdutoController@marcaFormList');
   Route::post('/marca/adicionar', 'AdmProdutoController@marcaAdd');

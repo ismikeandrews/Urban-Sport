@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Banner;
+use App\Promo;
 use App\User;
 use App\Newsletter;
 
@@ -45,4 +47,60 @@ class AdminController extends Controller
 
       return view('dashboard.addCliente');
     }
+
+    public function bannerUpdate(Request $request){
+      $this->validate($request, ['foto' => 'required']);
+
+      $arquivo1 = $request->file('foto');
+
+      $caminhoDafoto = public_path()."/imgbanner/";
+
+      $nomeDoarquivo = $arquivo->getClientOriginalName();
+
+      //mover
+      $arquivo->move($caminhoDafoto, $nomeDoarquivo);
+
+      $arquivo2 = $request->file('foto');
+
+      $caminhoDafoto = public_path()."/imgbanner/";
+
+      $nomeDoarquivo = $arquivo->getClientOriginalName();
+
+      //mover
+      $arquivo->move($caminhoDafoto, $nomeDoarquivo);
+
+      $arquivo3 = $request->file('foto');
+
+      $caminhoDafoto = public_path()."/imgbanner/";
+
+      $nomeDoarquivo = $arquivo->getClientOriginalName();
+
+      //mover
+      $arquivo->move($caminhoDafoto, $nomeDoarquivo);
+
+      $arquivo4 = $request->file('foto');
+
+      $caminhoDafoto = public_path()."/imgbanner/";
+
+      $nomeDoarquivo = $arquivo->getClientOriginalName();
+
+      //mover
+      $arquivo->move($caminhoDafoto, $nomeDoarquivo);
+
+      $arquivo5 = $request->file('foto');
+
+      $caminhoDafoto = public_path()."/imgbanner/";
+
+      $nomeDoarquivo = $arquivo->getClientOriginalName();
+
+      //mover
+      $arquivo->move($caminhoDafoto, $nomeDoarquivo);
+
+
+      $atualizar = Produto::find($request);
+
+      $atualizar->foto = "/imgbanner/".$nomeDoarquivo;
+    }
+
+
 }

@@ -93,10 +93,10 @@
 
       </div>
       <div class="btn-group">
-        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button type="button" class="btn btn-dark border-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fa fa-shopping-cart" style="font-size:18px;color:white"></i>
         </button>
-        <div class="dropdown-menu">
+        <div class="dropdown-menu dropdown-menu-right">
           <a class="dropdown-item" href="#">Action</a>
           <a class="dropdown-item" href="#">Another action</a>
           <a class="dropdown-item" href="#">Something else here</a>
@@ -114,13 +114,13 @@
     <div class="container">
       <div class="row d-flex justify-content-around">
         <li class="nav-item text-center col-4">
-          <a class="nav-link <?php if($page=='/pagina/marca'){ echo 'active';}else { echo '';} ?> text-dark" href="/pagina/marca">Marcas</a>
+          <a class="nav-link <?php if($page=='/pagina/marca'){ echo 'active';}else { echo '';} ?> text-dark font-weight-bold" href="/pagina/marca">Marcas</a>
         </li>
         <li class="nav-item text-center col-4">
-          <a class="nav-link <?php if($page=='/pagina/categoria'){ echo 'active';}else { echo '';} ?> text-dark" href="/pagina/categoria">Categorias</a>
+          <a class="nav-link <?php if($page=='/pagina/categoria'){ echo 'active';}else { echo '';} ?> text-dark font-weight-bold" href="/pagina/categoria">Categorias</a>
         </li>
         <li class="nav-item text-center col-4">
-          <a class="nav-link <?php if($page=='/pagina/esporte'){ echo 'active';}else { echo '';} ?> text-dark upper-case" href="/pagina/esporte">Sports</a>
+          <a class="nav-link <?php if($page=='/pagina/esporte'){ echo 'active';}else { echo '';} ?> text-dark font-weight-bold" href="/pagina/esporte">Sports</a>
         </li>
       </div>
     </div>

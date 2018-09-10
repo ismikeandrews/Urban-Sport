@@ -141,6 +141,30 @@ class AdmProdutoController extends Controller
     ->with('tamanhos', $tamanhos)
     ->with('esportes', $esportes);
   }
+  // Ordenar Produtos
+  public function orderName(Request $request){
+    $produtos = Produto::orderBy('name')->paginate(10);
+
+    return view('dashboard.admProdutos')->with('produtos', $produtos);
+  }
+
+  public function orderNameDesc(Request $request){
+    $produtos = Produto::orderBy('name', 'desc')->paginate(10);
+
+    return view('dashboard.admProdutos')->with('produtos', $produtos);
+  }
+
+  public function orderId(Request $request){
+    $produtos = Produto::orderBy('id')->paginate(10);
+
+    return view('dashboard.admProdutos')->with('produtos', $produtos);
+  }
+
+  public function orderIdDesc(Request $request){
+    $produtos = Produto::orderBy('id', 'desc')->paginate(10);
+
+    return view('dashboard.admProdutos')->with('produtos', $produtos);
+  }
 
   //Marcas
   public function marcaFormList(){
