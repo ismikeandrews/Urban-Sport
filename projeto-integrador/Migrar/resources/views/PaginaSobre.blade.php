@@ -79,9 +79,9 @@
                     <div class="card-body text-dark">
                         <h5 class="card-title">1 - Aplicar AJAX no formulário de login e cadastro; 2 - Inserir validação no login e no cadastro</h5>
                         <p class="card-text">Linguagem usada: Javascript<br>             
-                        P.O: Marcelo<br>
-                        Scrum Master: Michael<br>
-                        Dev: Liu<p>
+                        P.O: Liu<br>
+                        Scrum Master: Marcelo<br>
+                        Dev: Michael<p>
                     </div>
                 </div>
         </div>
