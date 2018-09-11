@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\CupomDesconto;
 use App\Produto;
+use App\PedidoProduto;
+use App\Pedido;
 
 class ProdutosController extends Controller
 {
@@ -18,7 +20,7 @@ class ProdutosController extends Controller
   }
 
   public function pedido (Request $request, $id) {
-    $pedido = Produto::find($id);
+    $pedido = PedidoProduto::find($id);
     return view('Carrinho')->with('pedido', $pedido);
 
   }
