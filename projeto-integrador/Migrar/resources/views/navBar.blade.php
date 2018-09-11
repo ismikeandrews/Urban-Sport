@@ -93,16 +93,19 @@
 
       </div>
       <div class="btn-group">
-        <button type="button" class="btn btn-dark border-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a href="/pagina/carrinho" class="btn bg-dark border-primary">
           <i class="fa fa-shopping-cart" style="font-size:18px;color:white"></i>
+        </a>
+        <button type="button" class="btn bg-dark border-primary text-white dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
         </button>
-        <div class="dropdown-menu dropdown-menu-right">
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
           <a class="dropdown-item" href="#">Action</a>
           <a class="dropdown-item" href="#">Another action</a>
           <a class="dropdown-item" href="#">Something else here</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Alguma coisa</a>
+          <a class="dropdown-item" href="#">Separated link</a>
         </div>
+      </div>
       </div>
     </div>
   </div>

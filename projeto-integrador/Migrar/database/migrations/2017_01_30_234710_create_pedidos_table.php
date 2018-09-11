@@ -13,6 +13,7 @@ class CreatePedidosTable extends Migration
      */
     public function up()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::create('pedidos', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned(); // unsigned: somente inteiros positivos
@@ -20,6 +21,7 @@ class CreatePedidosTable extends Migration
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users');
         });
+        Schema::enableForeignKeyConstraints();
     }
 
     /**
@@ -29,6 +31,8 @@ class CreatePedidosTable extends Migration
      */
     public function down()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('pedidos');
+        Schema::enableForeignKeyConstraints();
     }
 }

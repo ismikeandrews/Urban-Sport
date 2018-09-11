@@ -19,6 +19,7 @@ Route::get('/pagina/categoria', 'PaginasController@categoria');
 Route::get('/pagina/esporte', 'PaginasController@esporte');
 Route::get('/pagina/procurar', 'PaginasController@search');
 Route::get('/pagina/sobre', 'PaginasController@sobre');
+Route::get('/pagina/carrinho', 'ProdutosController@carrinho');
 
 //orderBy
 Route::get('/pagina/marca/ordenar/{id}', 'PaginasController@orderMarca');

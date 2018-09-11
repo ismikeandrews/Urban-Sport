@@ -13,6 +13,7 @@ class CreatePedidoProdutosTable extends Migration
      */
     public function up()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::create('pedido_produtos', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('pedido_id')->unsigned(); // unsigned: somente inteiros positivos
@@ -26,6 +27,7 @@ class CreatePedidoProdutosTable extends Migration
             $table->foreign('produto_id')->references('id')->on('produtos');
             $table->foreign('cupom_desconto_id')->references('id')->on('cupom_descontos');
         });
+        Schema::enableForeignKeyConstraints();
     }
 
     /**
@@ -35,6 +37,8 @@ class CreatePedidoProdutosTable extends Migration
      */
     public function down()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('pedido_produtos');
+        Schema::enableForeignKeyConstraints();
     }
 }

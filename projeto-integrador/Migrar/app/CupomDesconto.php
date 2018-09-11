@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class CupomDesconto extends Model
 {
+
+    protected $table = "cupom_descontos";
+
     protected $fillable = [
         'nome',
         'localizador',
@@ -14,5 +17,5 @@ class CupomDesconto extends Model
         'modo_limite',
         'dthr_validade',
         'ativo'
-    ]
+    ];
 }
