@@ -20,7 +20,7 @@ class CreatePedidoProdutosTable extends Migration
             $table->integer('produto_id')->unsigned();  // unsigned: somente inteiros positivos
             $table->enum('status', ['RE', 'PA', 'CA']); // Reservado, Pago, Cancelado
             $table->decimal('valor', 6, 2)->default(0);
-            $table->decimal('desconto', 6, 2)->default(0);
+            $table->decimal('desconto', 6, 2)->default(0)->nullable();
             $table->integer('cupom_desconto_id')->nullable()->unsigned(); // unsigned: somente inteiros positivos
             $table->timestamps();
             $table->foreign('pedido_id')->references('id')->on('pedidos');

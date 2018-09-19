@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mt-10">
   <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">

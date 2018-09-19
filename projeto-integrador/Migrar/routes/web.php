@@ -19,7 +19,12 @@ Route::get('/pagina/categoria', 'PaginasController@categoria');
 Route::get('/pagina/esporte', 'PaginasController@esporte');
 Route::get('/pagina/procurar', 'PaginasController@search');
 Route::get('/pagina/sobre', 'PaginasController@sobre');
-Route::get('/pagina/carrinho', 'ProdutosController@carrinho');
+Route::get('/pagina/checkout', 'ProdutosController@showCheckout');
+Route::post('/pagina/checkout', 'ProdutosController@postCheckout');
+
+Route::get('/pagina/carrinho', 'ProdutosController@showCarrinho');
+//adicionar ao carrinho
+Route::get('/add/carrinho/{id}', 'ProdutosController@carrinho');
 
 //orderBy
 Route::get('/pagina/marca/ordenar/{id}', 'PaginasController@orderMarca');
@@ -31,6 +36,7 @@ Route::get('/pagina/newsletter', 'PaginasController@newsletter');
 
 //User
 Route::get('/user/update/{id}', 'userController@showform');
+Route::post('/user/update/{id}', 'userController@updateUser');
 Auth::routes();
 Route::get('/home', 'HomeController@index');
 

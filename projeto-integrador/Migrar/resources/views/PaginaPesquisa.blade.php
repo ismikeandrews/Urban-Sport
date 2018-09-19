@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<?php $page = 'ola'; ?>
+<?php $page = 'pesquisa'; ?>
 <section class="mt-1">
   <div class="container">
     <h3>Pesquisa</h3>
@@ -10,21 +10,22 @@
 
       @if(count ($produtos) > 0)
       @foreach($produtos as $produto)
-      <div class="card mt-1 shadow mx-2" style="width: 17rem;">
+      <div class="card shadow mx-2 mt-1" style="width: 17rem;">
         <a href="/pagina/produto/{{ $produto->id }}"><img class="card-img-top border"src="{{ $produto->foto }}" alt="Card image cap"></a>
         <div class="card-body">
-          <h5 class="card-title">R$ {{ $produto->valor }}</h5>
+          <h6 style="height:40px;">{{ $produto->name }}</h6>
+          <h5 class="card-title text-primary">R$ {{ $produto->valor }}</h5>
           <div style="height:100px; overflow: scroll;">
             <p class="card-text">{{ $produto->description }}</p>
           </div>
-          <a href="#" class="btn btn-primary mt-1">Adicionar ao carrinho</a>
+          <a href="/add/carrinho/{{ $produto->id }}" class="btn btn-primary mt-1">Adicionar ao carrinho</a>
         </div>
       </div>
       @endforeach
       @else
       <div class="container">
-        <h5 class="alert alert-danger" role="alert">
-          Nenhum resultato encontrado
+        <h5 class="alert alert-danger text-center mt-0" role="alert">
+          Nenhum resultado encontrado 😵
         </h6>
       </div>
       @endif

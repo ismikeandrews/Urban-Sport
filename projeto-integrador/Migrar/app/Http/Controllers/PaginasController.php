@@ -13,9 +13,10 @@ use App\Newsletter;
 class PaginasController extends Controller
 {
     public function index(){
-      $produtos = Produto::take(16)->inRandomOrder()->get();
+      $produtos = Produto::take(20)->inRandomOrder()->get();
+      $lancamentos = Produto::take(8)->orderBy('id', 'desc')->get();
 
-      return view('index')->with('produtos', $produtos);
+      return view('index')->with('produtos', $produtos)->with('lancamentos', $lancamentos);
     }
 
     public function produto($id){

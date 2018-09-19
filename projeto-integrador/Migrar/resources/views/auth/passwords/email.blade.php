@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<?php $page = 'email'; ?>
+<div class="container mt-0">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">

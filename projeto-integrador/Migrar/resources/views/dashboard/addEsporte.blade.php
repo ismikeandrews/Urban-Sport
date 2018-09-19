@@ -45,7 +45,7 @@
             <tr>
               <th>#</th>
               <th>Nome</th>
-              <th>Ações</th>
+              <th>Deletar</th>
             </tr>
           </thead>
           <tbody>
@@ -53,7 +53,7 @@
             <tr style="height:50px;">
               <td>{{ $esporte->id }}</td>
               <td>{{ $esporte->name }}</td>
-              <td><a href="/admin/esporte/delete/{{$esporte->id}}" class="badge badge-danger">Remover</a></td>
+              <td><a href="/admin/esporte/delete/{{$esporte->id}}" class="badge badge-danger"><i class="far fa-trash-alt" style="font-size:20px;"></a></td>
             </tr>
             @endforeach
           </tbody>

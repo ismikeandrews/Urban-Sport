@@ -13,6 +13,7 @@ class CreateCupomDescontosTable extends Migration
      */
     public function up()
     {
+      Schema::disableForeignKeyConstraints();
         Schema::create('cupom_descontos', function (Blueprint $table) {
              $table->increments('id');
             $table->string('nome');
@@ -25,6 +26,7 @@ class CreateCupomDescontosTable extends Migration
             $table->enum('ativo', ['S', 'N'])->default('S');
             $table->timestamps();
         });
+      Schema::enableForeignKeyConstraints();
     }
 
     /**
@@ -34,6 +36,8 @@ class CreateCupomDescontosTable extends Migration
      */
     public function down()
     {
+      Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('cupom_descontos');
+      Schema::enableForeignKeyConstraints();
     }
 }

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-laravel">
+<nav class="navbar-expand-md navbar-dark bg-dark navbar-laravel">
   <div class="container">
     <!-- Left Side Of Navbar -->
     <ul class="navbar-nav mr-auto">
@@ -6,12 +6,12 @@
     </ul>
 
     <!-- Right Side Of Navbar -->
-    <ul class="navbar-nav ml-auto">
+    <ul class="navbar-nav ml-auto d-flex justify-content-end">
       <!-- Authentication Links -->
       @guest
       <li class="nav-item dropdown">
         <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>{{ __('Login') }}<span class="caret"></span> </a>
-        <div class="dropdown-menu dropdown-menu-right pl-2 pr-2" aria-labelledby="navbarDropdown">
+        <div class="dropdown-menu dropdown-menu-right login" aria-labelledby="navbarDropdown">
           <form class="px-4 py-3" method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
             @csrf
             <div class="form-group">
@@ -38,7 +38,7 @@
                 Lembrar-me
               </label>
             </div>
-            <button type="submit" class="col-md-12 btn btn-primary">Entrar</button>
+            <button type="submit" class="col-md-12 col-xl-12  btn btn-primary">Entrar</button>
 
           </form>
           <div class="dropdown-divider"></div>
@@ -49,6 +49,9 @@
           <a class="nav-link text-white" href="{{ route('register') }}">Cadastro</a>
       </li>
       @else
+      <li class="nav-item pr-2">
+        <img src="{{ asset('img/profile.png') }}" class="rounded-circle" width="37" alt="logo">
+      </li>
       <li class="nav-item dropdown">
         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
           {{ Auth::user()->first_name." ".Auth::user()->last_name }} <span class="caret"></span>
@@ -64,7 +67,7 @@
           {{ __('Logout') }}
         </a>
 
-        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none">
           @csrf
         </form>
       </div>
@@ -93,26 +96,41 @@
 
       </div>
       <div class="btn-group">
-        <a href="/pagina/carrinho" class="btn bg-dark border-primary">
+        <a href="/pagina/carrinho" class="btn bg-dark border-primary px-3">
           <i class="fa fa-shopping-cart" style="font-size:18px;color:white"></i>
         </a>
         <button type="button" class="btn bg-dark border-primary text-white dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Separated link</a>
+        <div class="dropdown-menu dropdown-menu-right order-md-2 mb-4 px-3 carrinho">
+
+          <h4 class="d-flex justify-content-between align-items-center mb-3 mt-10">
+            <span class="text-body">Meu carrinho</span>
+            <span class="badge badge-success badge-pill">{{ Session::has('cart') ? Session::get('cart')->quantidade : '' }}</span>
+          </h4>
+
+          <ul class="list-group mb-3">
+
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Nome</h6>
+                <small class="text-muted">Breve descrição</small>
+              </div>
+              <span class="text-muted">R$ 25</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <span>Total (R$)</span>
+              <strong>R$25</strong>
+            </li>
+
+          </ul>
         </div>
       </div>
       </div>
     </div>
   </div>
 </nav>
-<hr>
 </header>
-<div class=" sticky-top bg-white">
+<div class=" sticky-top bg-white pt-3">
   <ul class="nav nav-tabs ">
     <div class="container">
       <div class="row d-flex justify-content-around">
@@ -123,7 +141,7 @@
           <a class="nav-link <?php if($page=='/pagina/categoria'){ echo 'active';}else { echo '';} ?> text-dark font-weight-bold" href="/pagina/categoria">Categorias</a>
         </li>
         <li class="nav-item text-center col-4">
-          <a class="nav-link <?php if($page=='/pagina/esporte'){ echo 'active';}else { echo '';} ?> text-dark font-weight-bold" href="/pagina/esporte">Sports</a>
+          <a class="nav-link <?php if($page=='/pagina/esporte'){ echo 'active';}else { echo '';} ?> text-dark font-weight-bold" href="/pagina/esporte">Esportes</a>
         </li>
       </div>
     </div>

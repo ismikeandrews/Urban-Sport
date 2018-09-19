@@ -20,11 +20,12 @@
           <div class="card mt-1 shadow mx-2" style="width: 14.8rem;">
             <a href="/pagina/produto/{{ $produto->id }}"><img class="card-img-top border"src="{{ $produto->foto }}" alt="Card image cap"></a>
             <div class="card-body">
+              <h6 style="height:40px;">{{ $produto->name }}</h6>
               <h5 class="card-title">R$ {{ $produto->valor }}</h5>
               <div style="height:90px; overflow: scroll;">
                 <p class="card-text">{{ $produto->description }}</p>
               </div>
-              <a href="#" class="btn btn-primary mt-1">Adicionar ao carrinho</a>
+              <a href="/add/carrinho/{{ $produto->id }}" class="btn btn-primary mt-1">Adicionar ao carrinho</a>
             </div>
           </div>
           @endforeach

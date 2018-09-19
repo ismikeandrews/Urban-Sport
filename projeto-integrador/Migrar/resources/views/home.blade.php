@@ -2,9 +2,15 @@
 
 @section('content')
 <?php $page = '/home'; ?>
-<div class="container">
+<div class="container mt-0">
+  @if(isset($tudocerto) && $tudocerto)
+  <div class="col-12">
+    <div class="alert alert-success text-center" role="alert">
+      Informações alteradas com sucesso
+    </div>
+  </div>
+  @endif
   <div class="row d-flex justify-content-around">
-
     <div class="col-md-3 col-sm-12 shadow">
       <div class="py-4 text-center">
         <div class="row">

@@ -13,13 +13,36 @@
               <div><a href="#"><img src="{{$produto->foto}}"></a></div>
             </div>
             <div class="img-small-wrap">
-              <div class="item-gallery"> <img class="border" src="{{ $produto->foto }}"> </div>
-              <div class="item-gallery"> <img class="border" src="{{ $produto->foto }}"> </div>
-              <div class="item-gallery"> <img class="border" src="{{ $produto->foto }}"> </div>
-              <div class="item-gallery"> <img class="border" src="{{ $produto->foto }}"> </div>
+              <div class="item-gallery"><a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice" data-image="{{ $produto->foto }}" data-target="#image-gallery"> <img class="border" src="{{ $produto->foto }}"> </a></div>
+              <div class="item-gallery"><a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice" data-image="{{ $produto->foto }}" data-target="#image-gallery"> <img class="border" src="{{ $produto->foto }}"> </a></div>
+              <div class="item-gallery"><a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice" data-image="{{ $produto->foto }}" data-target="#image-gallery"> <img class="border" src="{{ $produto->foto }}"> </a></div>
+              <div class="item-gallery"><a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice" data-image="{{ $produto->foto }}" data-target="#image-gallery"> <img class="border" src="{{ $produto->foto }}"> </a></div>
             </div>
           </article>
         </aside>
+
+        <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="image-gallery-title"></h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img id="image-gallery-image" class="img-responsive col-md-12" src="{{ $produto->foto }}">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary float-left" id="show-previous-image"><i class="fa fa-arrow-left"></i>
+                </button>
+
+                <button type="button" id="show-next-image" class="btn btn-primary float-right"><i class="fa fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <aside class="col-sm-7">
           <article class="card-body p-5">
           <h3 class="title mb-3">{{ $produto->name }}</h3>
@@ -37,10 +60,6 @@
           <dl class="param param-feature">
             <dt>Modelo #</dt>
             <dd>{{ $produto->id }}</dd>
-          </dl>
-          <dl class="param param-feature">
-            <dt>Cor</dt>
-            <dd>Amarelo e Azul</dd>
           </dl>
           <dl class="param param-feature">
             <dt>Entraga</dt>
@@ -66,24 +85,14 @@
                 <dt>Tamanho: </dt>
                 <dd>
                   <label class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                    <span class="form-check-label">SM</span>
-                  </label>
-                  <label class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                    <span class="form-check-label">MD</span>
-                  </label>
-                  <label class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                    <span class="form-check-label">XXL</span>
+                    <span class="form-check-label">{{$produto->tamanho->name}}</span>
                   </label>
                 </dd>
               </dl>
             </div>
           </div>
           <hr>
-          <a href="#" class="btn btn-lg btn-primary"> Comprar agora </a>
-          <a href="#" class="btn btn-lg btn-outline-primary">Adicionar no carrinho </a>
+          <a href="/add/carrinho/{{ $produto->id }}" class="btn btn-lg btn-outline-primary">Adicionar no carrinho </a>
           </article>
         </aside>
       </div>

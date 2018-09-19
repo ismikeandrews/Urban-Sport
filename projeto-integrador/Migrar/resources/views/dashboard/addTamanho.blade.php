@@ -63,7 +63,7 @@
               <th>#</th>
               <th>Nome</th>
               <th>Categoria</th>
-              <th>Ações</th>
+              <th>Deletar</th>
             </tr>
           </thead>
           <tbody>
@@ -72,7 +72,7 @@
               <td>{{ $tamanho->id }}</td>
               <td>{{ $tamanho->name }}</td>
               <td>{{ $tamanho->categoria->name }}</td>
-              <td><a href="/admin/tamanho/delete/{{$tamanho->id}}" class="badge badge-danger">Remover</a></td>
+              <td><a href="/admin/tamanho/delete/{{$tamanho->id}}" class="badge badge-danger"><i class="far fa-trash-alt" style="font-size:20px;"></a></td>
             </tr>
             @endforeach
           </tbody>

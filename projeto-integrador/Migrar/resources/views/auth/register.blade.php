@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<?php $page = 'nada'; ?>
+<?php $page = '/pagina/carrinho'; ?>
 <section id="singup">
   <div class="container">
     <div class="py-5 text-center">
@@ -63,7 +63,7 @@
           <div class="form-group mb-3">
             <label for="genero">Genero</label>
             <select class="form-control {{ $errors->has('genero') ? ' is-invalid' : '' }}" name="genero" value="{{ old('genero') }}" id="exampleFormControlSelect1">
-              <option value="">Selecione</option>
+              <option value="{{ old('genero') }}">{{ old('genero') }}</option>
               <option value="Masculino">Masculino</option>
               <option value="Feminino">Feminino</option>
             </select>
@@ -75,7 +75,7 @@
           </div>
 
           <div class="mb-3">
-            <label for="email">{{ __('E-Mail Address') }}</label>
+            <label for="email">E-mail</label>
             <input id="email" type="text" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}">
             @if ($errors->has('email'))
             <span class="invalid-feedback" role="alert">
@@ -86,9 +86,13 @@
 
 
           <div class="mb-3">
-            <label for="password">{{ __('Password') }}</label>
-            <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password">
-
+            <label for="password">Senha</label>
+            <div class="input-group">
+              <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }} border-right-0 pwd" name="password">
+              <span class="input-group-btn">
+                <button class="btn btn-light border-secondary reveal" type="button"><i class="fas fa-eye" style="font-size:16px;"></i></button>
+              </span>
+            </div>
             @if ($errors->has('password'))
             <span class="invalid-feedback" role="alert">
               <strong>{{ $errors->first('password') }}</strong>
@@ -97,7 +101,7 @@
           </div>
 
           <div class="mb-3">
-            <label for="password-confirm">{{ __('Confirm Password') }}</label>
+            <label for="password-confirm">Confirme sua senha</label>
             <input id="password-confirm" type="password" class="form-control" name="password_confirmation">
           </div>
           <button type="submit" class="btn btn-primary">Cadastrar</button>

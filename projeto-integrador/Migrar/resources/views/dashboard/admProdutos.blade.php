@@ -25,7 +25,8 @@
               <th>Marca</th>
               <th>Categoria</th>
               <th>Esporte</th>
-              <th>Ações</th>
+              <th>Editar</th>
+              <th>Deletar</th>
             </tr>
           </thead>
           <tbody>
@@ -39,7 +40,8 @@
               <td class="table-warning">{{ $produto->marca->name }}</td>
               <td>{{ $produto->categoria->name }}</td>
               <td>{{ $produto->esporte->name }}</td>
-              <td><a href="/admin/produto/delete/{{$produto->id}}" class="badge badge-danger">remover</a> <a href="/admin/produto/edit/{{ $produto->id }}" class="badge badge-secondary">editar</a></td>
+              <td><a href="/admin/produto/edit/{{ $produto->id }}" class="badge badge-secondary"><i class="fas fa-pencil-alt" style="font-size:20px;"></i></a></td>
+              <td><a href="/admin/produto/delete/{{$produto->id}}" class="badge badge-danger"><i class="far fa-trash-alt" style="font-size:20px;"></i></a></td>
             </tr>
             @endforeach
           </tbody>

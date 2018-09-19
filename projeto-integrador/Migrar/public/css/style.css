@@ -57,3 +57,15 @@ footer{
 .cor{
   color: rgb(0, 255, 148);
 }
+
+.carrinho{
+  min-width: 15rem !important;
+}
+
+.login{
+  min-width: 13rem !important;
+}
+
+.mt-10{
+  margin-top: 10px !important;
+}
